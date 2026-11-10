@@ -280,7 +280,7 @@ button { cursor: pointer; background: none; border: 0; padding: 0; }
 .atacado__inner { max-width: var(--max); margin: 0 auto; padding: 100px var(--gutter); display: grid; gap: 54px; }
 .atacado__foto { position: relative; margin: 0; overflow: hidden; border-radius: 999px 999px 2px 2px; aspect-ratio: 4 / 5.4; }
 .atacado__foto img { width: 100%; height: 118%; object-fit: cover; object-position: 50% 20%; }
-.atacado__foto figcaption { position: absolute; left: 0; right: 0; bottom: 18px; text-align: center; font-family: var(--serif); font-style: italic; font-size: 20px; color: var(--marfim); text-shadow: 0 1px 12px rgba(0,0,0,.3); }
+.atacado__foto figcaption { position: absolute; left: 50%; bottom: 18px; transform: translateX(-50%); white-space: nowrap; font-family: var(--serif); font-style: italic; font-size: 18px; color: var(--tinta); background: var(--marfim); padding: 6px 16px; border-radius: 999px; }
 .vantagens { list-style: none; margin: 40px 0 44px; padding: 0; display: grid; }
 .vantagens li { display: grid; grid-template-columns: 44px 1fr; gap: 6px; padding: 20px 0; border-top: 1px solid var(--linha); }
 .vantagens li:last-child { border-bottom: 1px solid var(--linha); }
