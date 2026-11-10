@@ -1,0 +1,119 @@
+{
+  "fonte": "Coletado do Instagram @maryjaystore_ em 10/11/2026 (posts recentes e destaques Medida e Endereço).",
+  "produtos": [
+    {
+      "id": "conjunto-patricia",
+      "nome": "Conjunto Patrícia",
+      "nomeConfirmado": true,
+      "tipo": "Conjunto cropped + calça em renda",
+      "cores": [{ "nome": "Rosa", "hex": "#F1C9CB" }],
+      "tamanhos": ["PP", "P", "M"],
+      "foto": "assets/img/produto-1.jpg",
+      "alt": "Modelo usando o Conjunto Patrícia, cropped e calça em renda rosa, ao lado de uma rede de palha",
+      "legenda": "A delicadeza da renda encontra a leveza do verão.",
+      "post": "https://www.instagram.com/p/DfHuMKclX6Y/"
+    },
+    {
+      "id": "conjunto-botoes-azul",
+      "nome": "Conjunto Botões",
+      "nomeConfirmado": false,
+      "tipo": "Cropped com botões + short",
+      "cores": [{ "nome": "Azul", "hex": "#7FA3C2" }, { "nome": "Rosa", "hex": "#E4B7BC" }],
+      "tamanhos": ["PP", "P", "M"],
+      "foto": "assets/img/produto-2.jpg",
+      "alt": "Modelo usando cropped azul com botões e short de cintura alta com detalhe de passamanaria",
+      "legenda": "A leveza dos dias ensolarados em um look cheio de charme e frescor.",
+      "post": "https://www.instagram.com/p/DfW5XxIAEcI/"
+    },
+    {
+      "id": "macacao-branco",
+      "nome": "Macacão Branco Renda",
+      "nomeConfirmado": false,
+      "tipo": "Macacão de alça com recorte em renda",
+      "cores": [{ "nome": "Branco", "hex": "#F6F3EE" }],
+      "tamanhos": ["PP", "P", "M"],
+      "foto": "assets/img/produto-3.jpg",
+      "alt": "Modelo usando macacão branco pantalona com recorte de renda na cintura",
+      "legenda": "A delicadeza do branco em uma composição leve e sofisticada.",
+      "post": "https://www.instagram.com/p/DfhM75EFVM_/"
+    },
+    {
+      "id": "vestido-midi-renda",
+      "nome": "Vestido Midi Renda",
+      "nomeConfirmado": false,
+      "tipo": "Vestido midi com recorte no busto",
+      "cores": [{ "nome": "Areia", "hex": "#D9D2B8" }],
+      "tamanhos": ["PP", "P", "M"],
+      "foto": "assets/img/produto-4.jpg",
+      "alt": "Modelo usando vestido midi de renda cor areia com recorte vazado no busto",
+      "legenda": "A delicadeza da renda encontra a sofisticação em cada detalhe.",
+      "post": "https://www.instagram.com/p/DfkpMiHGWEu/"
+    },
+    {
+      "id": "vestido-rosa-babados",
+      "nome": "Vestido Babados",
+      "nomeConfirmado": false,
+      "tipo": "Vestido longo assimétrico com babados",
+      "cores": [{ "nome": "Rosa", "hex": "#F3BFCB" }, { "nome": "Preto", "hex": "#1E1B18" }],
+      "tamanhos": ["PP", "P", "M"],
+      "foto": "assets/img/produto-5.jpg",
+      "alt": "Modelo usando vestido rosa longo com fenda e babados em renda",
+      "legenda": "A delicadeza do rosa em uma composição feminina e leve.",
+      "post": "https://www.instagram.com/p/DfCrvUXkRMs/"
+    },
+    {
+      "id": "macacao-simone",
+      "nome": "Macacão Simone",
+      "nomeConfirmado": true,
+      "tipo": "Macacão tomara que caia pantalona com faixa",
+      "cores": [{ "nome": "Coral", "hex": "#F4A08A" }, { "nome": "Amarelo", "hex": "#F2DE95" }],
+      "tamanhos": ["PP", "P", "M"],
+      "foto": "assets/img/produto-6.jpg",
+      "alt": "Modelo usando o Macacão Simone coral, tomara que caia, com faixa na cintura",
+      "legenda": "Macacão Simone. Cores: coral e amarelo.",
+      "post": "https://www.instagram.com/p/DetrSiRkfBS/"
+    },
+    {
+      "id": "vestido-preto-babados",
+      "nome": "Vestido Noite",
+      "nomeConfirmado": false,
+      "tipo": "Vestido longo com babados em renda",
+      "cores": [{ "nome": "Preto", "hex": "#1E1B18" }],
+      "tamanhos": ["PP", "P", "M"],
+      "foto": "assets/img/produto-7.jpg",
+      "alt": "Modelo usando vestido preto longo com fenda e babados de renda",
+      "legenda": "A leveza do verão, com elegância e autenticidade.",
+      "post": "https://www.instagram.com/p/DejaY9PDflp/"
+    },
+    {
+      "id": "conjunto-amarelo-ziper",
+      "nome": "Conjunto Zíper",
+      "nomeConfirmado": false,
+      "tipo": "Cropped corselet com zíper + short",
+      "cores": [{ "nome": "Amarelo", "hex": "#F2E29E" }],
+      "tamanhos": ["PP", "P", "M"],
+      "foto": "assets/img/produto-8.jpg",
+      "alt": "Modelo usando cropped amarelo com zíper frontal e short de cintura alta",
+      "legenda": "O verão pede leveza, frescor e elegância em cada detalhe.",
+      "post": "https://www.instagram.com/p/DecCLL1Dpgl/"
+    }
+  ],
+  "elasUsam": [
+    { "foto": "assets/img/elas-usam-1.jpg", "alt": "Look conjunto rosa com botões", "post": "https://www.instagram.com/p/DfAXXRACQkI/" },
+    { "foto": "assets/img/elas-usam-2.jpg", "alt": "Look vestido midi rosa com recortes", "post": "https://www.instagram.com/p/DerGXlZEZI3/" },
+    { "foto": "assets/img/elas-usam-3.jpg", "alt": "Look conjunto preto em renda", "post": "https://www.instagram.com/p/DehHP2_kRBU/" },
+    { "foto": "assets/img/elas-usam-4.jpg", "alt": "Look conjunto areia com peplum", "post": "https://www.instagram.com/p/DeZE3n_kaIp/" },
+    { "foto": "assets/img/elas-usam-5.jpg", "alt": "Look macacão amarelo pantalona", "post": "https://www.instagram.com/p/DeWgE3MkeZY/" },
+    { "foto": "assets/img/elas-usam-6.jpg", "alt": "Look conjunto amarelo com laço", "post": "https://www.instagram.com/p/DePKymhjkNT/" }
+  ],
+  "medidas": {
+    "observacao": "PP, P e M vêm do destaque Medida do Instagram. G e GG são exemplo.",
+    "linhas": [
+      { "tamanho": "PP", "numeracao": "34/36", "busto": 90, "cintura": 69, "quadril": 91, "real": true },
+      { "tamanho": "P", "numeracao": "38/40", "busto": 96, "cintura": 75, "quadril": 97, "real": true },
+      { "tamanho": "M", "numeracao": "40/42", "busto": 102, "cintura": 81, "quadril": 103, "real": true },
+      { "tamanho": "G", "numeracao": "44/46", "busto": 108, "cintura": 87, "quadril": 109, "real": false },
+      { "tamanho": "GG", "numeracao": "48/50", "busto": 114, "cintura": 93, "quadril": 115, "real": false }
+    ]
+  }
+}
