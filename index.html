@@ -5,21 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Mary Jay | Moda feminina com confecção própria em Divinópolis</title>
   <meta name="description" content="Mary Jay: roupas femininas leves e elegantes, com confecção própria em Divinópolis-MG desde 2018. Atacado e varejo com atendimento pelo WhatsApp.">
-  <meta name="theme-color" content="#FAF7F2">
+  <meta name="theme-color" content="#F5F0E8">
   <meta property="og:title" content="Mary Jay | Leveza que veste o seu verão">
   <meta property="og:description" content="Confecção própria em Divinópolis desde 2018. Atacado e varejo.">
   <meta property="og:image" content="assets/img/hero.jpg">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <script>
+    (function () {
+      var h = document.documentElement;
+      var estatico = /[?&]estatico/.test(location.search) || matchMedia('(prefers-reduced-motion: reduce)').matches;
+      h.classList.add('js', estatico ? 'estatico' : 'anim');
+      // segurança: se as bibliotecas de animação não carregarem, a página aparece sem animação
+      setTimeout(function () {
+        if (!window.__mjMotion && h.classList.contains('anim')) { h.classList.remove('anim'); h.classList.add('estatico'); }
+      }, 5000);
+    })();
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="preload" as="image" href="assets/img/hero.jpg">
-  <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
 
-  <!-- SVG sprites -->
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
     <symbol id="i-pena" viewBox="0 0 48 48">
       <path d="M43 3C31 4 21 10 15.5 19.5 12.8 24.2 11.6 29.6 11.8 35l2.3.6c1.2-3.7 3.2-7 5.8-9.6 7.5-1.4 13.3-6.2 16.6-12.8-2.6 1.2-5.6 1.7-8.5 1.5C33 12.3 38.6 8.3 43 3Z" fill="currentColor"/>
@@ -29,170 +38,281 @@
       <path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2Zm0 18.15a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.23 8.23 0 1 1 6.98 3.86Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.43-.06-.13-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.1-.22-.16-.47-.29Z"/>
     </symbol>
     <symbol id="i-insta" viewBox="0 0 24 24">
-      <path fill="none" stroke="currentColor" stroke-width="1.6" d="M7 2.8h10A4.2 4.2 0 0 1 21.2 7v10a4.2 4.2 0 0 1-4.2 4.2H7A4.2 4.2 0 0 1 2.8 17V7A4.2 4.2 0 0 1 7 2.8Z"/>
-      <circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.6"/>
+      <path fill="none" stroke="currentColor" stroke-width="1.5" d="M7 2.8h10A4.2 4.2 0 0 1 21.2 7v10a4.2 4.2 0 0 1-4.2 4.2H7A4.2 4.2 0 0 1 2.8 17V7A4.2 4.2 0 0 1 7 2.8Z"/>
+      <circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.5"/>
       <circle cx="17.4" cy="6.6" r="1.1" fill="currentColor"/>
     </symbol>
-    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-5-5 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-    <symbol id="i-fio" viewBox="0 0 24 24"><path d="M4 20c4-8 12-8 16-16M7 7l3 3m4 4 3 3" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><circle cx="20" cy="4" r="1.6" fill="none" stroke="currentColor" stroke-width="1.4"/></symbol>
-    <symbol id="i-sacola" viewBox="0 0 24 24"><path d="M5 8h14l-1 12H6L5 8Zm4 0V6a3 3 0 0 1 6 0v2" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></symbol>
-    <symbol id="i-caixa" viewBox="0 0 24 24"><path d="m3 7.5 9-4.5 9 4.5v9L12 21l-9-4.5v-9Zm0 0 9 4.5 9-4.5M12 12v9" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></symbol>
-    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4V5Z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M8 10h8M8 13h5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></symbol>
+    <symbol id="i-seta" viewBox="0 0 24 24"><path d="M4 12h16m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
     <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z" fill="none" stroke="currentColor" stroke-width="1.4"/><circle cx="12" cy="9.5" r="2.5" fill="none" stroke="currentColor" stroke-width="1.4"/></symbol>
     <symbol id="i-relogio" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M12 7.5V12l3 2" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></symbol>
-    <symbol id="i-estrela" viewBox="0 0 24 24"><path fill="currentColor" d="m12 3 2.6 5.6 6.1.6-4.6 4.1 1.3 6L12 16.2 6.6 19.3l1.3-6L3.3 9.2l6.1-.6L12 3Z"/></symbol>
+    <symbol id="i-estrela" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.5 13.6 10.4 21.5 12 13.6 13.6 12 21.5 10.4 13.6 2.5 12 10.4 10.4Z"/></symbol>
   </svg>
 
   <a class="skip" href="#conteudo">Pular para o conteúdo</a>
 
-  <!-- 1. Header -->
+  <!-- Abertura -->
+  <div class="loader" aria-hidden="true">
+    <div class="loader__centro">
+      <svg class="loader__pena" viewBox="0 0 48 48">
+        <path class="loader__traco" d="M43 3C31 4 21 10 15.5 19.5 12.8 24.2 11.6 29.6 11.8 35l2.3.6c1.2-3.7 3.2-7 5.8-9.6 7.5-1.4 13.3-6.2 16.6-12.8-2.6 1.2-5.6 1.7-8.5 1.5C33 12.3 38.6 8.3 43 3Z"/>
+        <path class="loader__traco" d="M6 45 27.5 17.5"/>
+      </svg>
+      <p class="loader__nome"><span>Mary</span> <span>Jay</span></p>
+      <p class="loader__sub">Confecção própria · Divinópolis</p>
+    </div>
+    <span class="loader__conta" data-loader-conta>0</span>
+  </div>
+
+  <!-- Header -->
   <header class="header" id="topo">
     <div class="header__inner">
       <a href="#topo" class="logo" aria-label="Mary Jay, voltar ao início">
         <span class="logo__selo" aria-hidden="true"><svg><use href="#i-pena"/></svg></span>
         <span class="logo__nome">Mary Jay</span>
       </a>
-
-      <nav class="nav" id="menu" aria-label="Menu principal">
-        <a href="#novidades">Novidades</a>
+      <nav class="nav" aria-label="Menu principal">
         <a href="#colecao">Coleção</a>
+        <a href="#detalhes">Detalhes</a>
         <a href="#atacado">Atacado</a>
         <a href="#medidas">Medidas</a>
         <a href="#contato">Contato</a>
-        <button class="btn btn--dark nav__cta-mobile" type="button" data-whats>
-          <svg aria-hidden="true"><use href="#i-whats"/></svg> Comprar pelo WhatsApp
-        </button>
       </nav>
-
       <div class="header__acoes">
-        <button class="btn btn--dark btn--sm header__cta" type="button" data-whats>
-          <svg aria-hidden="true"><use href="#i-whats"/></svg>
-          <span>Comprar pelo WhatsApp</span>
+        <button class="btn btn--tinta btn--sm header__cta" type="button" data-whats data-magnetic>
+          <svg aria-hidden="true"><use href="#i-whats"/></svg><span>Comprar pelo WhatsApp</span>
         </button>
-        <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu">
-          <span></span><span></span>
-        </button>
+        <button class="burger" type="button" aria-expanded="false" aria-controls="menu-mobile" aria-label="Abrir menu"><span></span><span></span></button>
       </div>
     </div>
   </header>
 
+  <div class="menu" id="menu-mobile" aria-hidden="true">
+    <nav class="menu__links" aria-label="Menu">
+      <a href="#colecao"><small>01</small>Coleção</a>
+      <a href="#detalhes"><small>02</small>Detalhes</a>
+      <a href="#atacado"><small>03</small>Atacado</a>
+      <a href="#medidas"><small>04</small>Medidas</a>
+      <a href="#contato"><small>05</small>Contato</a>
+    </nav>
+    <button class="btn btn--marfim" type="button" data-whats><svg aria-hidden="true"><use href="#i-whats"/></svg> Comprar pelo WhatsApp</button>
+    <p class="menu__rodape">Rua Pernambuco, 1075, Centro · Divinópolis-MG</p>
+  </div>
+
   <main id="conteudo">
 
-    <!-- 2. Hero -->
+    <!-- Hero -->
     <section class="hero" aria-labelledby="hero-titulo">
-      <div class="hero__media">
-        <img src="assets/img/hero.jpg" alt="Modelo usando conjunto azul de cropped com botões e short, com uma rede de palha ao fundo" width="1490" height="2030" fetchpriority="high">
+      <div class="hero__arte">
+        <div class="hero__arco" data-hero-arco>
+          <img src="assets/img/hero.jpg" alt="Modelo usando conjunto azul de cropped com botões e short, com uma rede de palha ao fundo" width="1490" height="2030" fetchpriority="high" data-hero-img>
+        </div>
+        <figure class="hero__cartao" data-hero-cartao aria-hidden="true">
+          <img src="assets/img/produto-1.jpg" alt="" width="775" height="959">
+          <figcaption>Conjunto Patrícia</figcaption>
+        </figure>
+        <div class="selo-giro" data-hero-selo aria-hidden="true">
+          <svg viewBox="0 0 200 200">
+            <defs><path id="circulo" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs>
+            <text><textPath href="#circulo">Confecção própria ✦ Atacado e varejo ✦ Desde 2018 ✦</textPath></text>
+          </svg>
+          <svg class="selo-giro__pena"><use href="#i-pena"/></svg>
+        </div>
       </div>
       <div class="hero__texto">
-        <h1 id="hero-titulo" class="hero__titulo">Leveza que veste <em>o seu verão</em></h1>
-        <p class="hero__sub">Confecção própria em Divinópolis desde 2018</p>
-        <div class="hero__botoes">
-          <a class="btn btn--dark" href="#novidades">Ver coleção <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
-          <a class="btn btn--ghost" href="#atacado">Quero revender</a>
+        <h1 id="hero-titulo" class="hero__titulo" data-split>Leveza que veste <em>o seu verão</em></h1>
+        <p class="hero__sub" data-hero-fade>Confecção própria em Divinópolis desde 2018</p>
+        <div class="hero__botoes" data-hero-fade>
+          <a class="btn btn--tinta" href="#colecao" data-magnetic>Ver coleção <svg aria-hidden="true"><use href="#i-seta"/></svg></a>
+          <a class="btn btn--linha" href="#atacado" data-magnetic>Quero revender</a>
         </div>
       </div>
-      <figure class="hero__detalhe" aria-hidden="true">
-        <img src="assets/img/produto-1.jpg" alt="" width="775" height="959">
-        <figcaption>Conjunto Patrícia</figcaption>
-      </figure>
+      <svg class="hero__tinta" viewBox="0 0 1200 400" preserveAspectRatio="none" aria-hidden="true">
+        <path data-traco d="M-20 330 C 180 250, 300 380, 470 300 S 760 120, 900 210 S 1120 330, 1240 160"/>
+      </svg>
+      <a class="hero__rolar" href="#manifesto" aria-label="Rolar para o conteúdo"><span></span>Role</a>
     </section>
 
-    <!-- 3. Diferenciais -->
-    <section class="diferenciais" aria-label="Diferenciais da Mary Jay">
-      <ul class="diferenciais__lista">
-        <li><svg aria-hidden="true"><use href="#i-fio"/></svg><span>Confecção própria</span></li>
-        <li><svg aria-hidden="true"><use href="#i-sacola"/></svg><span>Atacado e varejo</span></li>
-        <!-- EDITÁVEL: confirmar com a loja. O texto vem de CONFIG.diferencialEnvio no script.js -->
-        <li><svg aria-hidden="true"><use href="#i-caixa"/></svg><span data-envio>Envio para todo o Brasil</span></li>
-        <li><svg aria-hidden="true"><use href="#i-chat"/></svg><span>Atendimento pelo WhatsApp</span></li>
+    <!-- Faixa de palavras -->
+    <div class="faixa" aria-hidden="true">
+      <div class="faixa__trilho" data-faixa>
+        <span>Leveza</span><svg><use href="#i-estrela"/></svg><span>Delicadeza</span><svg><use href="#i-estrela"/></svg><span>Charme</span><svg><use href="#i-estrela"/></svg><span>Feminilidade</span><svg><use href="#i-estrela"/></svg><span>Elegância</span><svg><use href="#i-estrela"/></svg>
+        <span>Leveza</span><svg><use href="#i-estrela"/></svg><span>Delicadeza</span><svg><use href="#i-estrela"/></svg><span>Charme</span><svg><use href="#i-estrela"/></svg><span>Feminilidade</span><svg><use href="#i-estrela"/></svg><span>Elegância</span><svg><use href="#i-estrela"/></svg>
+      </div>
+    </div>
+
+    <!-- Manifesto -->
+    <section class="manifesto" id="manifesto" aria-label="Sobre a Mary Jay">
+      <p class="rotulo">Desde 2018</p>
+      <p class="manifesto__texto" data-preencher>Cada peça Mary Jay nasce aqui, na nossa confecção em Divinópolis. Do molde ao último ponto, pensada para vestir com <em>leveza, delicadeza e charme.</em></p>
+      <ul class="numeros">
+        <li><strong><span data-conta="2018" data-de="2000">2018</span></strong><span>ano em que a confecção nasceu</span></li>
+        <li><strong><span data-conta="28">28</span> mil</strong><span>seguidoras no Instagram</span></li>
+        <li><strong><span data-conta="100">100</span>%</strong><span>produção própria</span></li>
       </ul>
+      <svg class="manifesto__tinta" viewBox="0 0 600 120" aria-hidden="true"><path data-traco-scroll d="M10 80 C 90 20, 160 110, 250 60 S 420 10, 590 70"/></svg>
     </section>
 
-    <!-- 4. Novidades -->
-    <section class="secao" id="novidades" aria-labelledby="novidades-titulo">
-      <div class="secao__topo reveal">
-        <p class="eyebrow">Acabou de chegar</p>
-        <h2 id="novidades-titulo" class="titulo">Novidades</h2>
-        <p class="secao__intro">Peças pensadas para dias leves. Escolha a sua e fale com a gente pelo WhatsApp.</p>
+    <!-- Coleção -->
+    <section class="colecao" id="colecao" aria-labelledby="colecao-titulo">
+      <div class="colecao__fixo">
+        <div class="colecao__trilho" data-trilho>
+          <header class="colecao__intro">
+            <p class="rotulo">Coleção Verão</p>
+            <h2 id="colecao-titulo" class="titulo" data-split>Peças que pedem <em>para serem vistas</em></h2>
+            <p class="texto-suave">Doze modelos da nossa confecção. Toque na peça para ver os detalhes e pedir pelo WhatsApp.</p>
+            <p class="colecao__dica" aria-hidden="true"><span></span> Role para ver</p>
+          </header>
+          <!-- cards gerados a partir de conteudo.json -->
+          <div class="colecao__cards" data-vitrine></div>
+          <aside class="colecao__fim">
+            <p class="titulo titulo--md">Gostou de <em>alguma?</em></p>
+            <p class="texto-suave">Nossas vendedoras te ajudam com tamanho, cor e disponibilidade.</p>
+            <button class="btn btn--tinta" type="button" data-whats data-magnetic><svg aria-hidden="true"><use href="#i-whats"/></svg> Falar com uma vendedora</button>
+          </aside>
+        </div>
+        <div class="colecao__progresso" aria-hidden="true"><span data-progresso></span></div>
       </div>
-      <div class="vitrine" id="colecao" data-vitrine aria-live="polite">
-        <!-- cards gerados a partir de conteudo.json -->
-      </div>
-      <p class="vitrine__erro" data-vitrine-erro hidden>
-        Para ver a vitrine, abra o site por um servidor local (veja o README).
-      </p>
+      <p class="vitrine__erro" data-vitrine-erro hidden>Para ver a coleção, abra o site por um servidor local (veja o README).</p>
     </section>
 
-    <!-- 5. Atacado -->
+    <!-- Detalhes em tela cheia -->
+    <section class="detalhes" id="detalhes" aria-labelledby="detalhes-titulo">
+      <header class="detalhes__intro">
+        <p class="rotulo">O detalhe</p>
+        <h2 id="detalhes-titulo" class="titulo" data-split>Feito para ser visto <em>de perto</em></h2>
+      </header>
+
+      <article class="cap" data-cap>
+        <div class="cap__fixo">
+          <figure class="cap__media" data-cap-media>
+            <img src="assets/img/detalhe-botoes.jpg" alt="Detalhe do cropped azul com botões encapados e barra de passamanaria" width="1336" height="1785" loading="lazy" data-cap-img data-pos="50 30">
+          </figure>
+          <div class="cap__pontos" data-pontos>
+            <span class="ponto" data-fx=".63" data-fy=".22"><i></i><b>Botões encapados no mesmo tecido</b></span>
+            <span class="ponto" data-fx=".55" data-fy=".52"><i></i><b>Barra com passamanaria rendada</b></span>
+            <span class="ponto" data-fx=".46" data-fy=".75"><i></i><b>Bolsos com bordado inglês</b></span>
+          </div>
+          <div class="cap__texto" data-cap-texto>
+            <span class="cap__num">N° 01</span>
+            <h3 class="cap__titulo">Botões <em>encapados</em></h3>
+            <p>Botões forrados no próprio tecido e passamanaria na barra. Acabamento de alfaiataria em um conjunto leve de verão.</p>
+            <button class="cap__link" type="button" data-open="conjunto-botoes-azul">Ver o Conjunto Botões <svg aria-hidden="true"><use href="#i-seta"/></svg></button>
+          </div>
+        </div>
+      </article>
+
+      <article class="cap" data-cap>
+        <div class="cap__fixo">
+          <figure class="cap__media" data-cap-media>
+            <img src="assets/img/detalhe-renda.jpg" alt="Detalhe da renda rosa do Conjunto Patrícia, com decote e barra recortada" width="1336" height="1785" loading="lazy" data-cap-img data-pos="50 35">
+          </figure>
+          <div class="cap__pontos" data-pontos>
+            <span class="ponto" data-fx=".62" data-fy=".2"><i></i><b>Decote em renda ondulada</b></span>
+            <span class="ponto" data-fx=".5" data-fy=".42"><i></i><b>Renda transparente sobre forro</b></span>
+            <span class="ponto" data-fx=".38" data-fy=".76"><i></i><b>Barra no contorno da renda</b></span>
+          </div>
+          <div class="cap__texto" data-cap-texto>
+            <span class="cap__num">N° 02</span>
+            <h3 class="cap__titulo">Renda que <em>respira</em></h3>
+            <p>Camadas de renda delicada sobre forro, com a barra seguindo o desenho da própria renda.</p>
+            <button class="cap__link" type="button" data-open="conjunto-patricia">Ver o Conjunto Patrícia <svg aria-hidden="true"><use href="#i-seta"/></svg></button>
+          </div>
+        </div>
+      </article>
+
+      <article class="cap" data-cap>
+        <div class="cap__fixo">
+          <figure class="cap__media" data-cap-media>
+            <img src="assets/img/detalhe-costas-patricia.jpg" alt="Costas abertas do Conjunto Patrícia em renda rosa, com alças finas" width="1336" height="1542" loading="lazy" data-cap-img data-pos="50 30">
+          </figure>
+          <div class="cap__pontos" data-pontos>
+            <span class="ponto" data-fx=".53" data-fy=".3"><i></i><b>Costas nuas, alças finas</b></span>
+            <span class="ponto" data-fx=".6" data-fy=".43"><i></i><b>Amarração nas costas</b></span>
+            <span class="ponto" data-fx=".55" data-fy=".64"><i></i><b>Pantalona em renda</b></span>
+          </div>
+          <div class="cap__texto" data-cap-texto>
+            <span class="cap__num">N° 03</span>
+            <h3 class="cap__titulo">As costas <em>também falam</em></h3>
+            <p>Decote profundo, alças finas e amarração. Um look para ser lembrado quando você vai embora.</p>
+            <button class="cap__link" type="button" data-open="conjunto-patricia">Ver o Conjunto Patrícia <svg aria-hidden="true"><use href="#i-seta"/></svg></button>
+          </div>
+        </div>
+      </article>
+
+      <article class="cap" data-cap>
+        <div class="cap__fixo">
+          <figure class="cap__media" data-cap-media>
+            <img src="assets/img/detalhe-bordado.jpg" alt="Costas de um conjunto rosa com bordado floral vazado e laço de amarração" width="1336" height="1084" loading="lazy" data-cap-img data-pos="50 45">
+          </figure>
+          <div class="cap__pontos" data-pontos>
+            <span class="ponto" data-fx=".5" data-fy=".42"><i></i><b>Decote nas costas</b></span>
+            <span class="ponto" data-fx=".53" data-fy=".6"><i></i><b>Laço de amarração</b></span>
+            <span class="ponto" data-fx=".4" data-fy=".82"><i></i><b>Bordado floral vazado</b></span>
+          </div>
+          <div class="cap__texto" data-cap-texto>
+            <span class="cap__num">N° 04</span>
+            <h3 class="cap__titulo">Bordado <em>vazado</em></h3>
+            <p>Flores bordadas e recortadas sobre o rosa claro. Delicadeza em cada contorno.</p>
+            <button class="cap__link" type="button" data-whats data-msg="Oi! Vi o conjunto rosa bordado no site e quero saber mais.">Pedir este conjunto <svg aria-hidden="true"><use href="#i-seta"/></svg></button>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- Atacado -->
     <section class="atacado" id="atacado" aria-labelledby="atacado-titulo">
       <div class="atacado__inner">
-        <div class="atacado__texto reveal">
-          <p class="eyebrow">Para lojistas</p>
-          <h2 id="atacado-titulo" class="titulo">Compre direto <em>da confecção</em></h2>
-          <p class="secao__intro">Desde 2018 a Mary Jay produz as próprias peças em Divinópolis. Para a sua loja, isso significa mais margem e coleção sempre nova.</p>
-          <ul class="vantagens">
-            <li><strong>Preço de fábrica</strong><span>Sem intermediários entre a costura e a sua arara.</span></li>
-            <li><strong>Modelagem própria</strong><span>Peças exclusivas que valorizam o corpo da cliente.</span></li>
-            <li><strong>Coleção sempre nova</strong><span>Lançamentos frequentes para a sua vitrine girar.</span></li>
-            <li><strong>Vendedora dedicada</strong><span>Atendimento direto com a Luiza ou a Daiane.</span></li>
-          </ul>
-          <button class="btn btn--dark" type="button" data-whats data-msg="Oi! Tenho uma loja e quero saber como comprar no atacado da Mary Jay.">
-            <svg aria-hidden="true"><use href="#i-whats"/></svg> Falar com uma vendedora
-          </button>
+        <figure class="atacado__foto" data-revelar-img>
+          <img src="assets/img/produto-12.jpg" alt="Modelo usando vestido longo off-white com bordado de folhagens" width="656" height="1170" loading="lazy" data-parallax>
+          <figcaption>Direto da confecção, desde 2018</figcaption>
+        </figure>
+        <div class="atacado__conteudo">
+          <p class="rotulo">Para lojistas</p>
+          <h2 id="atacado-titulo" class="titulo" data-split>Compre direto <em>da confecção</em></h2>
+          <p class="texto-suave">Sem intermediários entre a nossa costura e a sua arara. Mais margem para a sua loja e coleção sempre nova.</p>
+          <ol class="vantagens">
+            <li data-surgir><span>01</span><div><strong>Preço de fábrica</strong><p>Você compra de quem produz.</p></div></li>
+            <li data-surgir><span>02</span><div><strong>Modelagem própria</strong><p>Peças exclusivas que valorizam o corpo da cliente.</p></div></li>
+            <li data-surgir><span>03</span><div><strong>Coleção sempre nova</strong><p>Lançamentos frequentes para a vitrine girar.</p></div></li>
+            <li data-surgir><span>04</span><div><strong>Vendedora dedicada</strong><p>Atendimento direto com a Luiza ou a Daiane.</p></div></li>
+          </ol>
+
+          <form class="form" data-form-atacado novalidate>
+            <p class="form__titulo">Monte sua mensagem</p>
+            <div class="form__campos">
+              <label class="campo"><input type="text" name="nome" autocomplete="name" required placeholder=" "><span>Seu nome</span></label>
+              <label class="campo"><input type="text" name="cidade" autocomplete="address-level2" required placeholder=" "><span>Cidade</span></label>
+              <label class="campo"><input type="text" name="loja" autocomplete="organization" required placeholder=" "><span>Nome da loja</span></label>
+            </div>
+            <p class="form__aviso" data-form-aviso role="alert" hidden>Preencha os três campos para continuar.</p>
+            <button class="btn btn--tinta" type="submit" data-magnetic><svg aria-hidden="true"><use href="#i-whats"/></svg> Falar com uma vendedora</button>
+          </form>
         </div>
-
-        <form class="form reveal" data-form-atacado novalidate>
-          <p class="form__titulo">Monte sua mensagem</p>
-          <p class="form__sub">Preencha e a gente abre o WhatsApp com tudo pronto.</p>
-          <label class="campo">
-            <span>Seu nome</span>
-            <input type="text" name="nome" autocomplete="name" required placeholder="Como podemos te chamar?">
-          </label>
-          <label class="campo">
-            <span>Cidade</span>
-            <input type="text" name="cidade" autocomplete="address-level2" required placeholder="Ex.: Divinópolis-MG">
-          </label>
-          <label class="campo">
-            <span>Nome da loja</span>
-            <input type="text" name="loja" autocomplete="organization" required placeholder="Ex.: Boutique da Ana">
-          </label>
-          <p class="form__aviso" data-form-aviso role="alert" hidden>Preencha os três campos para continuar.</p>
-          <button class="btn btn--dark btn--full" type="submit">
-            <svg aria-hidden="true"><use href="#i-whats"/></svg> Enviar pelo WhatsApp
-          </button>
-        </form>
       </div>
     </section>
 
-    <!-- 6. Elas usam -->
-    <section class="secao elas" aria-labelledby="elas-titulo">
-      <div class="secao__topo reveal">
-        <p class="eyebrow">#EuSouMaryJay</p>
-        <h2 id="elas-titulo" class="titulo">Elas usam!</h2>
-        <p class="secao__intro">Marque a <a href="https://www.instagram.com/maryjaystore_/" target="_blank" rel="noopener">@maryjaystore_</a> e apareça aqui.</p>
-      </div>
-      <div class="elas__grade" data-elas></div>
-      <div class="centro reveal">
-        <a class="btn btn--ghost" href="https://www.instagram.com/maryjaystore_/" target="_blank" rel="noopener">
-          <svg aria-hidden="true"><use href="#i-insta"/></svg> Seguir no Instagram
-        </a>
-      </div>
+    <!-- Elas usam -->
+    <section class="elas" aria-labelledby="elas-titulo">
+      <header class="elas__topo">
+        <p class="rotulo">#EuSouMaryJay</p>
+        <h2 id="elas-titulo" class="titulo" data-split>Elas <em>usam!</em></h2>
+        <p class="texto-suave">Marque a <a href="https://www.instagram.com/maryjaystore_/" target="_blank" rel="noopener">@maryjaystore_</a> e apareça aqui.</p>
+      </header>
+      <div class="elas__faixa" data-elas></div>
     </section>
 
-    <!-- 7. Medidas -->
-    <section class="secao medidas" id="medidas" aria-labelledby="medidas-titulo">
+    <!-- Medidas -->
+    <section class="medidas" id="medidas" aria-labelledby="medidas-titulo">
       <div class="medidas__inner">
-        <div class="secao__topo secao__topo--esq reveal">
-          <p class="eyebrow">Guia de medidas</p>
-          <h2 id="medidas-titulo" class="titulo">Qual é o <em>seu tamanho?</em></h2>
-          <p class="secao__intro">Medidas do corpo em centímetros (cm). Na dúvida, mande suas medidas para a vendedora que ela te ajuda a escolher.</p>
+        <div>
+          <p class="rotulo">Guia de medidas</p>
+          <h2 id="medidas-titulo" class="titulo" data-split>Qual é o <em>seu tamanho?</em></h2>
+          <p class="texto-suave">Medidas do corpo em centímetros. Na dúvida, mande suas medidas para a vendedora que ela te ajuda a escolher.</p>
         </div>
-        <div class="tabela-wrap reveal">
+        <div class="tabela-wrap">
           <table class="tabela">
             <caption class="sr-only">Tabela de medidas por tamanho, em centímetros</caption>
-            <thead>
-              <tr><th scope="col">Tam.</th><th scope="col">Num.</th><th scope="col">Busto</th><th scope="col">Cintura</th><th scope="col">Quadril</th></tr>
-            </thead>
+            <thead><tr><th scope="col">Tam.</th><th scope="col">Num.</th><th scope="col">Busto</th><th scope="col">Cintura</th><th scope="col">Quadril</th></tr></thead>
             <tbody data-medidas></tbody>
           </table>
           <p class="tabela__nota"><span class="selo-exemplo">exemplo</span> Valores de G e GG são ilustrativos e serão confirmados pela loja.</p>
@@ -200,86 +320,70 @@
       </div>
     </section>
 
-    <!-- 8. Depoimentos -->
-    <section class="secao depo" aria-labelledby="depo-titulo">
-      <div class="secao__topo reveal">
-        <p class="eyebrow">Feedback</p>
-        <h2 id="depo-titulo" class="titulo">Quem veste, <em>volta</em></h2>
-      </div>
-      <div class="depo__grade">
-        <!-- PLACEHOLDER: textos de exemplo. Trocar por feedbacks reais autorizados pela loja. -->
-        <figure class="depo__card reveal">
-          <span class="selo-exemplo">texto de exemplo</span>
-          <div class="estrelas" aria-label="5 de 5 estrelas"><svg><use href="#i-estrela"/></svg><svg><use href="#i-estrela"/></svg><svg><use href="#i-estrela"/></svg><svg><use href="#i-estrela"/></svg><svg><use href="#i-estrela"/></svg></div>
-          <blockquote>O caimento é perfeito e o tecido é muito fresquinho. Já é o meu terceiro conjunto.</blockquote>
+    <!-- Depoimentos (PLACEHOLDER: textos de exemplo) -->
+    <section class="depo" aria-labelledby="depo-titulo">
+      <p class="rotulo" id="depo-titulo">Feedback <span class="selo-exemplo">textos de exemplo</span></p>
+      <div class="depo__palco" data-depo>
+        <figure class="depo__item is-ativo">
+          <blockquote>“O caimento é perfeito e o tecido é muito fresquinho. Já é o meu terceiro conjunto.”</blockquote>
           <figcaption>Cliente Mary Jay · Divinópolis</figcaption>
         </figure>
-        <figure class="depo__card reveal">
-          <span class="selo-exemplo">texto de exemplo</span>
-          <div class="estrelas" aria-label="5 de 5 estrelas"><svg><use href="#i-estrela"/></svg><svg><use href="#i-estrela"/></svg><svg><use href="#i-estrela"/></svg><svg><use href="#i-estrela"/></svg><svg><use href="#i-estrela"/></svg></div>
-          <blockquote>Compro no atacado para a minha loja e as peças saem rápido. Atendimento impecável.</blockquote>
+        <figure class="depo__item">
+          <blockquote>“Compro no atacado para a minha loja e as peças saem rápido. Atendimento impecável.”</blockquote>
           <figcaption>Lojista parceira · MG</figcaption>
         </figure>
-        <figure class="depo__card reveal">
-          <span class="selo-exemplo">texto de exemplo</span>
-          <div class="estrelas" aria-label="5 de 5 estrelas"><svg><use href="#i-estrela"/></svg><svg><use href="#i-estrela"/></svg><svg><use href="#i-estrela"/></svg><svg><use href="#i-estrela"/></svg><svg><use href="#i-estrela"/></svg></div>
-          <blockquote>Pedi pelo WhatsApp, a vendedora me ajudou com o tamanho e chegou do jeitinho que eu queria.</blockquote>
+        <figure class="depo__item">
+          <blockquote>“A vendedora me ajudou com o tamanho e chegou do jeitinho que eu queria.”</blockquote>
           <figcaption>Cliente Mary Jay · pedido online</figcaption>
         </figure>
       </div>
-    </section>
-
-    <!-- 9. Grupo VIP -->
-    <section class="vip" aria-labelledby="vip-titulo">
-      <div class="vip__inner reveal">
-        <svg class="vip__pena" aria-hidden="true"><use href="#i-pena"/></svg>
-        <p class="eyebrow">Grupo VIP Mary Jay</p>
-        <h2 id="vip-titulo" class="titulo">Veja os lançamentos <em>antes de todo mundo</em></h2>
-        <p class="secao__intro">Novidades, reposições e condições especiais direto no seu WhatsApp.</p>
-        <a class="btn btn--dark" href="#" data-vip target="_blank" rel="noopener">
-          <svg aria-hidden="true"><use href="#i-whats"/></svg> Entrar no grupo
-        </a>
+      <div class="depo__pontos" role="tablist" aria-label="Escolher depoimento" data-depo-pontos>
+        <button type="button" role="tab" aria-selected="true" aria-label="Depoimento 1"></button>
+        <button type="button" role="tab" aria-selected="false" aria-label="Depoimento 2"></button>
+        <button type="button" role="tab" aria-selected="false" aria-label="Depoimento 3"></button>
       </div>
     </section>
 
-    <!-- 10. Visite a loja -->
-    <section class="secao loja" id="contato" aria-labelledby="loja-titulo">
-      <div class="loja__inner">
-        <div class="loja__info reveal">
-          <p class="eyebrow">Visite a loja</p>
-          <h2 id="loja-titulo" class="titulo">Venha <em>experimentar</em></h2>
-          <ul class="loja__lista">
-            <li>
-              <svg aria-hidden="true"><use href="#i-pin"/></svg>
-              <div><strong>Endereço</strong><span>Rua Pernambuco, 1075, Centro<br>Divinópolis-MG</span></div>
-            </li>
-            <li>
-              <svg aria-hidden="true"><use href="#i-relogio"/></svg>
-              <div><strong>Horário</strong><span data-horario>Segunda a sexta: 8h às 18h<br>Sábado: 8h às 13h</span></div>
-            </li>
-          </ul>
-          <div class="loja__botoes">
-            <a class="btn btn--dark" href="https://www.google.com/maps/search/?api=1&query=Rua+Pernambuco,+1075,+Centro,+Divin%C3%B3polis+-+MG" target="_blank" rel="noopener">Como chegar <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
-            <button class="btn btn--ghost" type="button" data-whats>
-              <svg aria-hidden="true"><use href="#i-whats"/></svg> Chamar no WhatsApp
-            </button>
-          </div>
+    <!-- Grupo VIP -->
+    <section class="vip" aria-labelledby="vip-titulo">
+      <div class="vip__inner">
+        <div class="selo-giro selo-giro--claro" aria-hidden="true">
+          <svg viewBox="0 0 200 200">
+            <defs><path id="circulo2" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs>
+            <text><textPath href="#circulo2">Grupo VIP ✦ Lançamentos em primeira mão ✦</textPath></text>
+          </svg>
+          <svg class="selo-giro__pena"><use href="#i-pena"/></svg>
         </div>
-        <div class="loja__mapa reveal">
-          <iframe title="Mapa da loja Mary Jay na Rua Pernambuco, 1075, Centro, Divinópolis-MG" src="https://www.google.com/maps?q=Rua+Pernambuco,+1075,+Centro,+Divin%C3%B3polis+-+MG&output=embed" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <p class="rotulo rotulo--claro">Grupo VIP Mary Jay</p>
+        <h2 id="vip-titulo" class="titulo titulo--claro" data-split>Veja os lançamentos <em>antes de todo mundo</em></h2>
+        <p class="texto-claro">Novidades, reposições e condições especiais direto no seu WhatsApp.</p>
+        <a class="btn btn--marfim" href="#" data-vip target="_blank" rel="noopener" data-magnetic><svg aria-hidden="true"><use href="#i-whats"/></svg> Entrar no grupo</a>
+      </div>
+    </section>
+
+    <!-- Visite a loja -->
+    <section class="loja" id="contato" aria-labelledby="loja-titulo">
+      <div class="loja__info">
+        <p class="rotulo">Visite a loja</p>
+        <h2 id="loja-titulo" class="titulo" data-split>Venha <em>experimentar</em></h2>
+        <ul class="loja__lista">
+          <li data-surgir><svg aria-hidden="true"><use href="#i-pin"/></svg><div><strong>Endereço</strong><span>Rua Pernambuco, 1075, Centro<br>Divinópolis-MG</span></div></li>
+          <li data-surgir><svg aria-hidden="true"><use href="#i-relogio"/></svg><div><strong>Horário</strong><span>Segunda a sexta: 8h às 18h<br>Sábado: 8h às 13h</span></div></li>
+        </ul>
+        <div class="loja__botoes">
+          <a class="btn btn--tinta" href="https://www.google.com/maps/search/?api=1&query=Rua+Pernambuco,+1075,+Centro,+Divin%C3%B3polis+-+MG" target="_blank" rel="noopener" data-magnetic>Como chegar <svg aria-hidden="true"><use href="#i-seta"/></svg></a>
+          <button class="btn btn--linha" type="button" data-whats data-magnetic><svg aria-hidden="true"><use href="#i-whats"/></svg> Chamar no WhatsApp</button>
         </div>
+      </div>
+      <div class="loja__mapa" data-revelar-img>
+        <iframe title="Mapa da loja Mary Jay na Rua Pernambuco, 1075, Centro, Divinópolis-MG" src="https://www.google.com/maps?q=Rua+Pernambuco,+1075,+Centro,+Divin%C3%B3polis+-+MG&output=embed" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </section>
   </main>
 
-  <!-- 11. Rodapé -->
   <footer class="rodape">
     <div class="rodape__inner">
-      <div class="rodape__marca">
-        <a href="#topo" class="logo logo--claro" aria-label="Mary Jay, voltar ao início">
-          <span class="logo__selo" aria-hidden="true"><svg><use href="#i-pena"/></svg></span>
-          <span class="logo__nome">Mary Jay</span>
-        </a>
+      <div class="rodape__col rodape__col--marca">
         <p>Loja de roupas femininas. Confecção própria, atacado e varejo desde 2018.</p>
       </div>
       <div class="rodape__col">
@@ -294,16 +398,36 @@
         </ul>
       </div>
     </div>
+    <p class="rodape__marca" data-marca aria-label="Mary Jay">Mary Jay</p>
     <div class="rodape__base">
       <p>© <span data-ano>2026</span> Mary Jay · Rua Pernambuco, 1075, Centro, Divinópolis-MG</p>
       <p>Site desenvolvido por <strong>Lucas Ribeiro</strong></p>
     </div>
   </footer>
 
-  <!-- 12. Botão flutuante -->
-  <button class="whats-float" type="button" data-whats aria-label="Falar no WhatsApp">
-    <svg aria-hidden="true"><use href="#i-whats"/></svg>
-  </button>
+  <button class="fab" type="button" data-whats aria-label="Falar no WhatsApp"><svg aria-hidden="true"><use href="#i-whats"/></svg></button>
+  <div class="cursor" aria-hidden="true"><span data-cursor-texto>Ver peça</span></div>
+
+  <!-- Janela da peça -->
+  <dialog class="modal" data-modal aria-labelledby="modal-nome">
+    <div class="modal__box">
+      <button class="modal__fechar" type="button" data-fechar aria-label="Fechar">×</button>
+      <figure class="modal__foto"><img src="assets/img/produto-1.jpg" alt="" data-modal-img></figure>
+      <div class="modal__info">
+        <p class="rotulo" data-modal-num></p>
+        <h3 class="modal__nome" id="modal-nome" data-modal-nome></h3>
+        <p class="modal__tipo" data-modal-tipo></p>
+        <p class="modal__legenda" data-modal-legenda></p>
+        <dl class="modal__dados">
+          <div><dt>Tamanhos</dt><dd data-modal-tam></dd></div>
+          <div><dt>Cores</dt><dd data-modal-cores></dd></div>
+          <div><dt>Valor</dt><dd>Consulte valores</dd></div>
+        </dl>
+        <button class="btn btn--tinta btn--full" type="button" data-whats data-modal-whats><svg aria-hidden="true"><use href="#i-whats"/></svg> Pedir no WhatsApp</button>
+        <a class="modal__insta" href="https://www.instagram.com/maryjaystore_/" target="_blank" rel="noopener" data-modal-post><svg aria-hidden="true"><use href="#i-insta"/></svg> Ver no Instagram</a>
+      </div>
+    </div>
+  </dialog>
 
   <!-- Seletor de vendedora -->
   <dialog class="seletor" data-seletor aria-labelledby="seletor-titulo">
@@ -316,6 +440,9 @@
     </form>
   </dialog>
 
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
   <script src="script.js" defer></script>
 </body>
 </html>
