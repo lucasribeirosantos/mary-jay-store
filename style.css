@@ -221,7 +221,7 @@ button { cursor: pointer; }
 .card__tag {
   position: absolute; top: 10px; left: 10px;
   background: rgba(250,247,242,.92); color: var(--tinta);
-  font-size: 10.5px; font-weight: 500; letter-spacing: .14em; text-transform: uppercase;
+  font-size: 11px; font-weight: 500; letter-spacing: .12em; text-transform: uppercase;
   padding: 5px 9px; border-radius: 999px;
 }
 .card__corpo { padding: 12px 2px 0; display: flex; flex-direction: column; gap: 6px; flex: 1; }
@@ -274,7 +274,7 @@ button { cursor: pointer; }
   border: 1px solid var(--areia-2); background: #fff;
   font-size: 16px; transition: border-color .2s;
 }
-.campo input::placeholder { color: #9C9289; }
+.campo input::placeholder { color: #7A7067; }
 .campo input:focus { outline: none; border-color: var(--tinta); }
 .campo input[aria-invalid="true"] { border-color: #B4544B; }
 .form__aviso { margin: 0; font-size: 13.5px; color: #9C3F37; }
@@ -296,7 +296,7 @@ button { cursor: pointer; }
 .medidas .secao__topo { margin-bottom: 0; }
 .tabela-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
 .tabela { width: 100%; border-collapse: collapse; font-size: 15px; white-space: nowrap; font-variant-numeric: tabular-nums; }
-.tabela th { font-size: 10.5px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--suave); text-align: center; padding: 0 6px 12px; }
+.tabela th { font-size: 11px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--suave); text-align: center; padding: 0 6px 12px; }
 .tabela td { text-align: center; padding: 13px 4px; border-top: 1px solid var(--areia-2); color: var(--tinta); }
 .tabela td:first-child, .tabela th:first-child { text-align: left; }
 .tabela td:first-child { font-family: var(--serif); font-size: 22px; font-weight: 600; }
@@ -304,7 +304,7 @@ button { cursor: pointer; }
 .tabela tr.is-exemplo td:first-child { font-style: normal; }
 .tabela__nota { margin: 14px 0 0; font-size: 13px; color: var(--suave); display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
 .selo-exemplo {
-  display: inline-block; font-size: 10px; font-weight: 500; letter-spacing: .14em; text-transform: uppercase;
+  display: inline-block; font-size: 11px; font-weight: 500; letter-spacing: .12em; text-transform: uppercase;
   background: var(--rosa-claro); color: #8A4E46; border: 1px dashed #D8A8A0;
   padding: 3px 8px; border-radius: 999px; font-style: normal;
 }
