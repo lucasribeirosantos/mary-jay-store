@@ -170,7 +170,13 @@
             <button class="btn btn--tinta" type="button" data-whats data-magnetic><svg aria-hidden="true"><use href="#i-whats"/></svg> Falar com uma vendedora</button>
           </aside>
         </div>
-        <div class="colecao__progresso" aria-hidden="true"><span data-progresso></span></div>
+        <div class="colecao__nav">
+          <div class="colecao__progresso" aria-hidden="true"><span data-progresso></span></div>
+          <div class="colecao__setas">
+            <button type="button" class="seta" data-seta="-1" aria-label="Peça anterior"><svg aria-hidden="true"><use href="#i-seta"/></svg></button>
+            <button type="button" class="seta" data-seta="1" aria-label="Próxima peça"><svg aria-hidden="true"><use href="#i-seta"/></svg></button>
+          </div>
+        </div>
       </div>
       <p class="vitrine__erro" data-vitrine-erro hidden>Para ver a coleção, abra o site por um servidor local (veja o README).</p>
     </section>
@@ -315,7 +321,6 @@
             <thead><tr><th scope="col">Tam.</th><th scope="col">Num.</th><th scope="col">Busto</th><th scope="col">Cintura</th><th scope="col">Quadril</th></tr></thead>
             <tbody data-medidas></tbody>
           </table>
-          <p class="tabela__nota"><span class="selo-exemplo">exemplo</span> Valores de G e GG são ilustrativos e serão confirmados pela loja.</p>
         </div>
       </div>
     </section>
@@ -358,6 +363,7 @@
         <h2 id="vip-titulo" class="titulo titulo--claro" data-split>Veja os lançamentos <em>antes de todo mundo</em></h2>
         <p class="texto-claro">Novidades, reposições e condições especiais direto no seu WhatsApp.</p>
         <a class="btn btn--marfim" href="#" data-vip target="_blank" rel="noopener" data-magnetic><svg aria-hidden="true"><use href="#i-whats"/></svg> Entrar no grupo</a>
+        <p class="vip__aviso"><span>Sugestão</span> Seção em teste. Confirmamos com vocês se ela fica no site.</p>
       </div>
     </section>
 
@@ -401,7 +407,7 @@
     <p class="rodape__marca" data-marca aria-label="Mary Jay">Mary Jay</p>
     <div class="rodape__base">
       <p>© <span data-ano>2026</span> Mary Jay · Rua Pernambuco, 1075, Centro, Divinópolis-MG</p>
-      <p>Site desenvolvido por <strong>Lucas Ribeiro</strong></p>
+      <p>Site desenvolvido por <a class="rodape__credito" href="https://lucasribeirodev.com.br" target="_blank" rel="noopener">Lucas Ribeiro</a></p>
     </div>
   </footer>
 

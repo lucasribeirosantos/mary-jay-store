@@ -186,17 +186,25 @@ function posicionarPontos() {
     const W = box.clientWidth; const H = box.clientHeight;
     const s = Math.max(W / nw, H / nh);
     const dx = (W - nw * s) * px; const dy = (H - nh * s) * py;
-    // a área do texto fica livre de etiquetas (no desktop o texto ocupa a esquerda)
+    // os pontos ficam presos ao lugar certo na foto; a etiqueta muda de lado
+    // se não couber e some se encostar no texto do capítulo
     const texto = $('[data-cap-texto]', cap);
-    const limiteY = desktop() ? H : texto.offsetTop - 28;
-    const limiteX = desktop() ? texto.offsetLeft + texto.offsetWidth + 40 : 0;
+    const caixa = box.getBoundingClientRect();
+    const rel = (el) => { const r = el.getBoundingClientRect(); return { l: r.left - caixa.left, t: r.top - caixa.top, r: r.right - caixa.left, b: r.bottom - caixa.top }; };
+    const tx = rel(texto);
+    const areaTexto = { l: tx.l - 16, t: tx.t - 24, r: desktop() ? tx.l + 584 : W, b: H };
+    const colide = (a, z) => a.l < z.r && a.r > z.l && a.t < z.b && a.b > z.t;
     $$('.ponto', cap).forEach((pt) => {
       const x = dx + (+pt.dataset.fx) * nw * s;
       const y = dy + (+pt.dataset.fy) * nh * s;
+      pt.hidden = false;
       pt.style.left = `${x}px`; pt.style.top = `${y}px`;
       pt.classList.toggle('ponto--esq', x > W * 0.56);
-      const sobreTexto = desktop() && x < limiteX && y > texto.offsetTop - 30;
-      pt.hidden = x < 16 || x > W - 16 || y < 70 || y > H - 20 || y > limiteY || sobreTexto;
+      let et = rel($('b', pt));
+      if (et.r > W - 8 || et.l < 8) { pt.classList.toggle('ponto--esq'); et = rel($('b', pt)); }
+      const marca = { l: x - 10, t: y - 10, r: x + 10, b: y + 10 };
+      pt.hidden = x < 16 || x > W - 16 || y < 80 || y > H - 20 || et.l < 8 || et.r > W - 8
+        || colide(marca, areaTexto) || colide(et, areaTexto);
     });
   });
 }
@@ -267,8 +275,22 @@ function progressoCarrossel() {
     const p = (trilho.scrollLeft + trilho.clientWidth) / trilho.scrollWidth;
     barra.style.transform = `scaleX(${Math.min(1, p)})`;
   };
-  trilho.addEventListener('scroll', atualizar, { passive: true });
-  atualizar();
+  const setas = $$('[data-seta]');
+  const passo = () => { const c = $('.peca', trilho); return c ? c.getBoundingClientRect().width + (parseFloat(getComputedStyle(trilho).columnGap) || 14) : 320; };
+  const noTrilhoFixo = () => html.classList.contains('anim') && desktop();
+  const marcarSetas = () => {
+    if (noTrilhoFixo()) { setas.forEach((b) => { b.disabled = false; }); return; }
+    setas[0].disabled = trilho.scrollLeft < 8;
+    setas[1].disabled = trilho.scrollLeft + trilho.clientWidth >= trilho.scrollWidth - 8;
+  };
+  setas.forEach((b) => b.addEventListener('click', () => {
+    const d = +b.dataset.seta * passo();
+    // no desktop o trilho anda com a rolagem da página (1px de rolagem = 1px de trilho)
+    if (noTrilhoFixo()) { if (lenis) lenis.scrollTo(scrollY + d, { duration: 1.1 }); else scrollBy({ top: d, behavior: 'smooth' }); }
+    else trilho.scrollBy({ left: d, behavior: 'smooth' });
+  }));
+  trilho.addEventListener('scroll', () => { atualizar(); marcarSetas(); }, { passive: true });
+  atualizar(); marcarSetas();
 }
 
 /* ==========================================================
@@ -466,8 +488,8 @@ async function iniciarMovimento() {
         { clipPath: 'inset(0% 0% 0% 0% round 0px 0px 0px 0px)', ease: 'power2.inOut', duration: 1 }, 0)
         .fromTo(img, { scale: 1.35 }, { scale: 1, ease: 'power2.out', duration: 1.15 }, 0)
         .from(texto.children, { y: 70, opacity: 0, stagger: 0.07, duration: 0.45, ease: 'power3.out' }, 0.72)
-        .from($$('.ponto i', cap), { scale: 0, duration: 0.25, stagger: 0.12, ease: 'back.out(2)' }, 0.95)
-        .from($$('.ponto b', cap), { opacity: 0, x: (i, el) => (el.parentElement.classList.contains('ponto--esq') ? 14 : -14), duration: 0.3, stagger: 0.12 }, 1.0)
+        .from($$('.ponto i', cap), { scale: 0, duration: 0.25, stagger: 0.12, ease: 'back.out(2)' }, 1.15)
+        .from($$('.ponto b', cap), { opacity: 0, x: (i, el) => (el.parentElement.classList.contains('ponto--esq') ? 14 : -14), duration: 0.3, stagger: 0.12 }, 1.2)
         .to({}, { duration: 0.55 });
     });
   });
